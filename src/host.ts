@@ -267,7 +267,7 @@ export class PlaywrightHost {
         hostInvoked = false;
         const record = surface.dialogs.get(String(intent.decision_token));
         if (!record || record.status !== 'pending') throw new HostProtoError('precondition_failed', 'decision token is unknown or already resolved', false, { decision_token: intent.decision_token });
-        const decision = String(params.decision ?? record.default === 'deny' ? 'dismiss' : 'accept');
+        const decision = String(params.decision ?? (record.default === 'deny' ? 'dismiss' : 'accept'));
         if (!['accept', 'dismiss'].includes(decision)) throw new HostProtoError('invalid_request', 'unknown decision', false, { decision });
         hostInvoked = true;
         if (decision === 'accept') await record.handle.accept(String(params.value ?? '')); else await record.handle.dismiss();

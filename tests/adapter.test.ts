@@ -132,6 +132,15 @@ describe('HostProto semantics on a real engine', () => {
     expect(dup.sc.code).toBe('precondition_failed');
   });
 
+  it('an explicit accept accepts (regression: precedence of the default decision)', async () => {
+    await call('hostproto_surface_act', { schema_version: 'hostproto.intent/v1', action_id: 'a-6b', surface, kind: 'javascript', params: { value: 'setTimeout(() => confirm("again"), 10); 1' } });
+    // event_kind matches any recorded event, so the earlier dialog.opened would satisfy it: poll for the new pending record.
+    let pending: any;
+    for (let i = 0; i < 50 && !pending; i++) { await new Promise(r => setTimeout(r, 50)); pending = (await call('hostproto_surface_observe', { surface, projections: ['dialogs'] })).sc.data.dialogs.find((d: any) => d.status === 'pending'); }
+    const accepted = await call('hostproto_surface_act', { schema_version: 'hostproto.intent/v1', action_id: 'a-6c', surface, kind: 'dialog.resolve', decision_token: pending.token, params: { decision: 'accept' } });
+    expect(accepted.sc.effects[0].decision).toBe('accept');
+  });
+
   it('reports deadline_exceeded with the unsatisfied conditions', async () => {
     const { sc, isError } = await call('hostproto_surface_await', { surface, conditions: [{ kind: 'title', equals: 'Never' }], deadline_ms: 50 });
     expect(isError).toBe(true);
