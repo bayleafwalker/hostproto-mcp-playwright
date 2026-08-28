@@ -1,18 +1,18 @@
 {
   "repository": "https://github.com/bayleafwalker/hostproto-semantics",
-  "commit": "4c36ea776c2a46f5d79c059bae9ffb7312df31bf",
+  "commit": "04251e681d86c2705b6fd35575e94f4197f7c098",
   "path": "bundled",
   "sha256": {
-    "capability-profile": "8991affc82c0345e11e0f7d1420424cb18bf3e58ee195dd1973acabcf8dc5dfd",
-    "deviation": "4274da1b5b04b7fefa1e7e3bdde5c5bb6bf5c305e174415c00a1d940c3108efb",
-    "error": "d89ee4a6462faace3051da037e65804ea2a67cb2afe56978c7644c4b1f7e01f6",
-    "evidence-ref": "541be0627da13afa69f54719a0b9ad11589a1c2bbd72a8026dc8ac938941cc31",
-    "handles": "29ba81ffc57f496a6c5079600cd0faa03acaf4574bb6640a5c1dbb17f887fe6c",
-    "intent": "8f22662bb4d37d1e67882f8564c1191aa69b92dc3b479b205bb6ba232a64f52f",
-    "observation": "710dba3cea3a3bc7a2efdd431c966b352f6aae856bd221dfed241d2ebe46334f",
-    "precondition": "9c2a888347b5b477d54bd2fa84841a1e3d7d64b88940a906dbe72e4ea7d61edc",
-    "receipt": "2a667afa650cdd39205ec927f748c942c4aeabf25ff5209b4c27a32a07dd49d1",
-    "recovery": "c5a00af7b90b655d18ee09697ee3e0ae1a4f5e8b8e2ad7f52b4dbe72c5d73b0b",
-    "target-ref": "767166031cd2c935d88f82808db67aaa465678beb538124f307c6923da3965c2"
+    "capability-profile": "6dfb084bdfe98dae42049e575fbf9653c7e534ef021925e15d99d0912e722f7b",
+    "deviation": "dcb3f6a66f3fcd59dd877b94390bad251b5c10c2cee11e283673dce04888b372",
+    "error": "c1a0eb62a73134b03a9fb7e83fe80e9354bb25a7d524f37fd2e94543e5ade8dc",
+    "evidence-ref": "0c86dfdadd6727550b9dcb2ffc670db7057b0d5349c81481b8ef511ce7888c33",
+    "handles": "4c1152caf1ee37e358f7834849caa6dac26050a639ad82e9c13360a0036244e8",
+    "intent": "c07819f22f4c251f28d819d5edce4e351e6c3f2366e1e06273a55579f6eef04b",
+    "observation": "19858f4dc59707906e432819da78c5d3c859384247555952fedf89ef97d7953a",
+    "precondition": "85758b05ff0c991a51ee91b25e06e08289fe9767abfef53cbacafb6f8ae236b4",
+    "receipt": "2b68f8230851425a57d2bbbb2708347136e0da070213526fa427d018cd68ceca",
+    "recovery": "b707c9664884aaeca354674071fed1dfec271ff7949aa09d9e692d6c88af4801",
+    "target-ref": "2901bc4a3f3c17ba3905f24e6974c72e413a5afc146bb66aa21b3d017788d161"
   }
 }
